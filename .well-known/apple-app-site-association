@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7V65W45U6T.com.example.fitUp",
+        "paths": [
+          "/post/*",
+          "/profile*",
+          "/reset-password*"
+        ]
+      }
+    ]
+  }
+}
