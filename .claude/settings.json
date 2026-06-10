@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(ls \"c:/Users/DIRR/.claude/projects/c--Users-DIRR-Desktop-fit-app-site/memory\" 2>nul; ls \"c:/Users/DIRR/.claude/projects/c--Programming-Flutter-Projects-fit-app/memory\" 2>nul)",
-      "Read(//c/Users/DIRR/.claude/projects/c--Users-DIRR-Desktop-fit-app-site/memory/**)"
+      "Read(//c/Users/DIRR/.claude/projects/c--Users-DIRR-Desktop-fit-app-site/memory/**)",
+      "Bash(ls \"c:/Users/DIRR/Desktop/fit_app_site/\" \"c:/Users/DIRR/Desktop/\" 2>nul | head -50)",
+      "Read(//c/Users/DIRR/Desktop/**)",
+      "Bash(ls \"c:/Users/DIRR/Downloads/\" 2>nul | grep -iE \"\\(png|jpg|jpeg|webp|gif\\)\" | head -20)",
+      "Read(//c/Users/DIRR/Downloads/**)",
+      "Bash(where ffmpeg *)",
+      "Bash(where convert *)",
+      "Bash(powershell -NoProfile -Command \"Get-Command magick, ffmpeg -ErrorAction SilentlyContinue | Select-Object Name, Source\")"
     ]
   }
 }
