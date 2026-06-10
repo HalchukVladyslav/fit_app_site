@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"c:/Users/DIRR/.claude/projects/c--Users-DIRR-Desktop-fit-app-site/memory\" 2>nul; ls \"c:/Users/DIRR/.claude/projects/c--Programming-Flutter-Projects-fit-app/memory\" 2>nul)",
+      "Read(//c/Users/DIRR/.claude/projects/c--Users-DIRR-Desktop-fit-app-site/memory/**)"
+    ]
+  }
+}
