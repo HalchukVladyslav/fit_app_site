@@ -9,7 +9,15 @@
       "Read(//c/Users/DIRR/Downloads/**)",
       "Bash(where ffmpeg *)",
       "Bash(where convert *)",
-      "Bash(powershell -NoProfile -Command \"Get-Command magick, ffmpeg -ErrorAction SilentlyContinue | Select-Object Name, Source\")"
+      "Bash(powershell -NoProfile -Command \"Get-Command magick, ffmpeg -ErrorAction SilentlyContinue | Select-Object Name, Source\")",
+      "Bash(ls -t \"c:/Users/DIRR/Downloads/\" 2>/dev/null | head -20; echo \"---\"; ls -t \"c:/Users/DIRR/Pictures/Screenshots/\" 2>/dev/null | head -10; echo \"---\"; ls -t \"c:/Users/DIRR/Pictures/\" 2>/dev/null | head -10)",
+      "Read(//c/Users/DIRR/Pictures/**)",
+      "Bash(powershell -NoProfile -Command 'Get-ChildItem -Path '\\\\''C:\\\\Users\\\\DIRR'\\\\'' -Recurse -Include '\\\\''*.png'\\\\'','\\\\''*.jpg'\\\\'','\\\\''*.jpeg'\\\\'' -ErrorAction SilentlyContinue -Depth 3 | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddMinutes\\(-30\\) } | Sort-Object LastWriteTime -Descending | Select-Object -First 10 FullName, LastWriteTime')",
+      "Bash(powershell -NoProfile -Command 'Get-ChildItem -Path '\\\\''C:\\\\Users\\\\DIRR\\\\AppData\\\\Local\\\\Temp'\\\\'' -Recurse -Include '\\\\''*.png'\\\\'','\\\\''*.jpg'\\\\'','\\\\''*.jpeg'\\\\'' -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddHours\\(-2\\) } | Sort-Object LastWriteTime -Descending | Select-Object -First 15 FullName, LastWriteTime, Length')",
+      "Bash(powershell -NoProfile -Command 'Get-ChildItem '\\\\''C:\\\\Users\\\\DIRR\\\\Downloads\\\\AyuGram Desktop\\\\'\\\\'' -Include '\\\\''*.png'\\\\'','\\\\''*.jpg'\\\\'','\\\\''*.jpeg'\\\\'' -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 5 | Format-Table Name, LastWriteTime, @{N='\\\\''SizeKB'\\\\'';E={[math]::Round\\($_.Length/1KB,1\\)}}')",
+      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Path 'C:\\\\Users\\\\DIRR\\\\Downloads\\\\AyuGram Desktop' -File -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 10 Name, LastWriteTime, Length\")",
+      "Bash(powershell -NoProfile -Command 'Get-ChildItem -Path '\\\\''C:\\\\Users\\\\DIRR\\\\Downloads'\\\\'' -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddDays\\(-1\\) -and $_.Extension -match '\\\\''\\\\.\\(png|jpg|jpeg\\)$'\\\\'' } | Sort-Object LastWriteTime -Descending | Select-Object FullName, LastWriteTime, Length')",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('home1.png','{B2EDB0E2-133F-4242-A6E3-148A597DE082}.png','{7A4233CC-AC39-4C9E-A29A-C77F7EFC81AD}.png','10tablet1.png','10tablet2.png'\\); foreach \\($f in $files\\) { $p = \"C:\\\\Users\\\\DIRR\\\\Downloads\\\\AyuGram Desktop\\\\$f\"; $img = [System.Drawing.Image]::FromFile\\($p\\); Write-Output \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) })"
     ]
   }
 }
