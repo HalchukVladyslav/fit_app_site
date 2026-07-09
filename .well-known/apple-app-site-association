@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "7V65W45U6T.com.example.fitUp",
+        "appID": "7V65W45U6T.com.up.fit",
         "paths": [
           "/post/*",
           "/profile*",
